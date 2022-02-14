@@ -16,4 +16,5 @@
     <color name="secondaryDarkColor">#c48b9f</color>
     <color name="primaryTextColor">#000000</color>
     <color name="secondaryTextColor">#000000</color>
+    <color name="ic_launcher_background">#FFB2DD</color>
 </resources>
