@@ -4,4 +4,10 @@
     <string name="add_item_content_description">Add Item</string>
     <string name="search_text">Search</string>
     <string name="login_text">Login</string>
+    <string name="closing_title">Closing app</string>
+    <string name="closing_question">Do you want to close the app?</string>
+    <string name="no_text">NO</string>
+    <string name="yes_text">Yes</string>
+    <string name="undo_text">UNDO</string>
+    <string name="edit_item_text">Edit Item</string>
 </resources>

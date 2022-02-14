@@ -8,6 +8,7 @@ import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.asterisk.grocerylist.R
 import com.asterisk.grocerylist.databinding.AddEditDialogBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import dagger.hilt.android.AndroidEntryPoint
@@ -35,8 +36,10 @@ class AddEditDialog : BottomSheetDialogFragment() {
         val item = navArgs.item
         binding.apply {
             etItemName.setText(viewModel.itemName)
-            btnAdd.text = if (item != null) "Edit Item" else "Add Item"
-            tvTitle.text = if (item != null) "Edit Item" else "Add Item"
+            btnAdd.text =
+                if (item != null) getString(R.string.edit_item_text) else getString(R.string.add_item_text)
+            tvTitle.text =
+                if (item != null) getString(R.string.edit_item_text) else getString(R.string.add_item_text)
             itemCount.text = if (item != null) viewModel.itemCount.toString() else (1).toString()
 
             etItemName.addTextChangedListener {

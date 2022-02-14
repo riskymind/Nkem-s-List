@@ -97,7 +97,7 @@ class GroceryListFragment : Fragment(R.layout.fragment_grocery_list),
                             "${event.item.name} Deleted",
                             Snackbar.LENGTH_LONG
                         )
-                            .setAction("UNDO") {
+                            .setAction(getString(R.string.undo_text)) {
                                 viewModel.onUndoDeleteClicked(event.item)
                             }.show()
                     }
@@ -138,13 +138,13 @@ class GroceryListFragment : Fragment(R.layout.fragment_grocery_list),
     private val onBackPressedCallback = object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {
             MaterialAlertDialogBuilder(requireContext())
-                .setTitle("Closing app")
-                .setMessage("Do you want to close the app?")
+                .setTitle(getString(R.string.closing_title))
+                .setMessage(getString(R.string.closing_question))
                 .setIcon(R.drawable.ic_list_alt)
-                .setNegativeButton("NO") { _, _ ->
+                .setNegativeButton(getString(R.string.no_text)) { _, _ ->
 
                 }
-                .setPositiveButton("Yes") { dialog, _ ->
+                .setPositiveButton(getString(R.string.yes_text)) { dialog, _ ->
                     dialog.dismiss()
                     activity?.finish()
                 }
